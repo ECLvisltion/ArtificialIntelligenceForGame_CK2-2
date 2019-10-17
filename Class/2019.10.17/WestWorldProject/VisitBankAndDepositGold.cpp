@@ -24,12 +24,12 @@ void VisitBankAndDepositGold::Player(Miner * miner)
 
 void VisitBankAndDepositGold::Enter(BaseGameEntity * miner)
 {
-	cout << miner->GetName() << " : ì€í–‰ì— ìž…ìž¥í•˜ì…¨ìŠµë‹ˆë‹¤." << endl;
+	cout << miner->GetName() << " : ÀºÇà¿¡ ÀÔÀåÇÏ¼Ì½À´Ï´Ù." << endl;
 }
 
 void VisitBankAndDepositGold::Execute(BaseGameEntity * miner)
 {
-	cout << miner->GetName() << " : ì€í–‰ì— ìž…ê¸ˆí•˜ì…¨ìŠµë‹ˆë‹¤." << endl;
+	cout << miner->GetName() << " : ÀºÇà¿¡ ÀÔ±ÝÇÏ¼Ì½À´Ï´Ù." << endl;
 	player->AddGoldBank();
 
 	if (player->GetMoneyInBank() <= 30) { miner->ChangeState(EnterMineAndForNugget::GetInstance()); }
@@ -38,5 +38,5 @@ void VisitBankAndDepositGold::Execute(BaseGameEntity * miner)
 
 void VisitBankAndDepositGold::Exit(BaseGameEntity * miner)
 {
-	cout << miner->GetName() << " : ì€í–‰ì—ì„œ í‡´ìž¥í•˜ì…¨ìŠµë‹ˆë‹¤." << endl;
+	cout << miner->GetName() << " : ÀºÇà¿¡¼­ ÅðÀåÇÏ¼Ì½À´Ï´Ù." << endl;
 }
